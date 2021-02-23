@@ -64,7 +64,11 @@ img {
 .nav-bar .flex {
   justify-content: space-between;
 }
-.nav-bar h1 {
+.nav-bar nav {
+  padding: 10px 0;
+}
+.nav-bar .flex h1 {
+  font-size: 30px;
   font-weight: bolder;
   text-transform: uppercase;
   color: var(--secondary-color);
@@ -73,12 +77,11 @@ img {
   display: flex;
 }
 .nav-bar li {
-  padding: 2px;
+  padding: 10px;
 }
 
 .nav-bar a {
-  margin: 0 5px;
-  padding: 10px;
+  margin: 0 8px;
   color: var(--secondary-color);
   font-size: 1.2rem;
 }
@@ -103,10 +106,6 @@ img {
 .showcase .welcome-text {
   justify-self: flex-start;
   width: 100%;
-
-  /*
-  grid-column: 2/6;
-  grid: 1; */
 }
 .showcase .welcome-text h2,
 p {
@@ -122,6 +121,7 @@ p {
 
 .showcase .show-image {
   justify-self: flex-end;
+  width: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -136,7 +136,7 @@ p {
     height: 110px;
     overflow: hidden;
   }
-  .nav-bar h1 {
+  .nav-bar nav h1 {
     font-size: 30px;
   }
   .nav-bar .flex {
@@ -284,8 +284,13 @@ input.delete-all:hover {
 }
 /* new list */
 .list-container {
-  width: 20%;
+  background-color: var(--primary-color);
+  width: 50%;
+  padding: 25px 40px;
   margin: auto;
+  border: 2px solid #f9e79f;
+  border-radius: 20px;
+  box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6), -4px -3px 3px rgba(0, 0, 0, 0.6);
 }
 .list-span {
   display: flex;
@@ -294,14 +299,15 @@ input.delete-all:hover {
   align-items: center;
   background-color: #f9e79f;
   padding: 9px;
-  border: 1px solid var(--primary-color);
+  border: 2px solid #f2f2f2;
   border-radius: 15px;
   transition: all 1s ease;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
 .list-span:hover {
-  transform: scale(1.2);
-  background-color: #2e95f1;
+  transform: scale(0.97);
+  background-color: #f2f2f2;
+  border: 3px solid #2e95f1;
 }
 span.new_list {
   color: var(--primary-color);
@@ -309,11 +315,12 @@ span.new_list {
   transition: all 1s ease;
 }
 span.new_list:hover {
-  color: #f2f2f2;
+  color: var(--primary-color);
 }
 footer {
   /* border-top: 3px solid #ffbe55; */
   background: #0b4870;
+  margin: 0;
 }
 footer p {
   padding: 15px;

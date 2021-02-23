@@ -6,17 +6,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="style.css" />
-
   <title>To Do List</title>
 </head>
 
 <body>
   <div class="nav-bar">
-    <div class="container flex">
-      <h1>GROUP 3 ENT PROJECT</h1>
-      <nav>
+    <div class="container">
+      <nav class="flex">
+        <h1>GROUP 3 ENT PROJECT</h1>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Services</a></li>
@@ -31,11 +29,11 @@
       <div class="welcome-text">
         <h2>A To Do List For You.</h2>
         <p>
-          Without some sort of external memory aid, we are guaranteed to forget
-          things due to the nature of our short-term memories. The average
-          person's short-term memory can only hold 7 pieces of information for
-          about 30 seconds. Keeping a to-do list will allow you to effortlessly
-          keep track of everything that you need to do.
+          Without some sort of external memory aid, we are guaranteed to
+          forget things due to the nature of our short-term memories. The
+          average person's short-term memory can only hold 7 pieces of
+          information for about 30 seconds. Keeping a to-do list will allow
+          you to effortlessly keep track of everything that you need to do.
         </p>
       </div>
       <div class="show-image">
@@ -43,29 +41,32 @@
       </div>
     </div>
   </section>
-  <div class="container">
+
+  <div class="con">
     <div class="heading">
       <h3>CREATE YOUR TO-DO LIST</h3>
     </div>
   </div>
 
-  <div class="container">
-    <form class="create-list" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-      <label for="todo">New Todo list :
-        <input id="todo" type="text" name="mytodo" placeholder="enter a new a todo" required pattern=".*\S+.*" autocomplete="off" />
-      </label>
-      <input type="submit" value="create" name="create" class="create" />
-    </form>
-    <div style="margin-top: 3rem"></div>
+
+  <form class="create-list" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <label for="todo">New Todo list :
+      <input id="todo" type="text" name="mytodo" placeholder="enter a new a todo" required pattern=".*\S+.*" autocomplete="off" />
+    </label>
+    <input type="submit" value="create" name="create" class="create" />
+  </form>
+
+  <div style="margin-top: 3rem">
     <div class="list-container">
       <?php echo $total;
       ?>
     </div>
   </div>
+
   <br /><br />
 
-  <div class="container">
-    <form class="complete-actions" action="" method="post" align="center">
+  <form class="complete-actions" action="" method="post" align="center">
+    <div class="container">
       <div>
         <label for="task-number">Enter Task number:
           <input id="task-number" type="number" name="complete" style="width: 70px" />
@@ -83,8 +84,11 @@
       <div align="center">
         <input class="delete-all" type="submit" value="Delete All" name="delete" />
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
+
+
+
   <footer>
     <div class="container">
       <p>Computer science Stream 2 &copy; Copyright Group 3 2021.</p>
