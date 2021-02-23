@@ -1,0 +1,322 @@
+:root {
+  --primary-color: #0b4870;
+  --secondary-color: #f2f2f2;
+  --basic-color: #f9e79f;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-family: "Nunito Regular";
+  background: #f2f2f2;
+}
+@font-face {
+  font-family: "Nunito Regular";
+  src: url("fonts/Nunito-Regular.ttf");
+}
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* NAV BAR */
+
+.nav-bar {
+  background: var(--primary-color);
+  border-bottom: 2px solid #ffbe55;
+  height: 80px;
+}
+.nav-bar .flex {
+  justify-content: space-between;
+}
+.nav-bar h1 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar li {
+  padding: 2px;
+}
+
+.nav-bar a {
+  margin: 0 5px;
+  padding: 10px;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+/* SHOW CASE SECTION */
+.showcase {
+  height: 60vh;
+  width: 100vw;
+  border-bottom: 2px solid var(--primary-color);
+  background-color: var(--basic-color);
+
+  /*  width: 100vw;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);*/
+}
+.showcase .flex {
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.showcase .welcome-text {
+  justify-self: flex-start;
+  width: 100%;
+
+  /*
+  grid-column: 2/6;
+  grid: 1; */
+}
+.showcase .welcome-text h2,
+p {
+  color: var(--primary-color);
+}
+.showcase .welcome-text h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.showcase .welcome-text p {
+  font-size: 1.2rem;
+}
+
+.showcase .show-image {
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .showcase {
+    height: auto;
+  }
+  .showcase .flex {
+    flex-direction: column;
+    overflow: auto;
+  }
+  .nav-bar {
+    height: 110px;
+    overflow: hidden;
+  }
+  .nav-bar h1 {
+    font-size: 30px;
+  }
+  .nav-bar .flex {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .showcase .flex {
+    flex-direction: column;
+    overflow: auto;
+  }
+  .nav-bar {
+    height: 110px;
+    width: auto;
+    overflow: hidden;
+  }
+  .nav-bar h1 {
+    font-size: 20px;
+  }
+  .nav-bar .flex {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+/* HEADING FOR TODO LIST FORM */
+
+div.heading h3 {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 1px 2px 1px rgba(52, 73, 94, 0.6);
+}
+
+/* Create list form */
+form.create-list {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.complete-actions div {
+  margin: 20px;
+}
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+input {
+  outline: none;
+  font-size: 15px;
+}
+
+input#todo,
+input[type="number"] {
+  text-align: left;
+  background: #fff;
+  padding: 10px 70px;
+  border: 2px solid var(--basic-color);
+  border-radius: 20px 0 0 20px;
+  color: var(--primary-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  padding: 10px 10px;
+}
+input.create {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Nunito Regular";
+  border: 2px solid var(--basic-color);
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border-radius: 0 20px 20px 0;
+  margin-left: 10px;
+  padding: 5px 15px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.8s ease-in;
+}
+/*CREATE BUTTON HOVER EFFECT */
+input.create:hover {
+  transform: scale(1.1) !important;
+  background-color: #2e95f1;
+  color: #f2f2f2;
+  border: 2px solid var(--primary-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+input.complete-button {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Nunito Regular";
+  border: 2px solid var(--basic-color);
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border-radius: 0 20px 20px 0;
+  margin-left: 10px;
+  padding: 10px 15px;
+  transition: all 0.8s ease-in-out;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+/* COMPLETE BUTTON HOVER EFFECT */
+input.complete-button:hover {
+  transform: scale(1.05);
+  background-color: #2e95f1;
+  color: #f2f2f2;
+  border: 2px solid var(--primary-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+input.delete-all {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Nunito Regular";
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background: #ffbe55;
+  border-radius: 20px;
+  padding: 9px 25px;
+  margin-bottom: 4rem;
+  transition: all 0.5s ease-in;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+/* DELETE ALL BUTTON HOVER EFFECT */
+input.delete-all:hover {
+  transform: scale(1.05);
+  background-color: red;
+  color: #f2f2f2;
+  border: 2px solid var(--primary-color);
+}
+/* new list */
+.list-container {
+  width: 20%;
+  margin: auto;
+}
+.list-span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9e79f;
+  padding: 9px;
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  transition: all 1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+.list-span:hover {
+  transform: scale(1.2);
+  background-color: #2e95f1;
+}
+span.new_list {
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: all 1s ease;
+}
+span.new_list:hover {
+  color: #f2f2f2;
+}
+footer {
+  /* border-top: 3px solid #ffbe55; */
+  background: #0b4870;
+}
+footer p {
+  padding: 15px;
+  text-align: center;
+  color: var(--secondary-color);
+}
