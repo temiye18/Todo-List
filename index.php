@@ -35,16 +35,17 @@
           information for about 30 seconds. Keeping a to-do list will allow
           you to effortlessly keep track of everything that you need to do.
         </p>
+        <a class="get-started" href="#start">Create Now</a>
       </div>
       <div class="show-image">
-        <img src="images/todo.png" alt="task pic" />
+        <img src="images/task.png" alt="task pic" />
       </div>
     </div>
   </section>
 
-  <div class="con">
+  <div class="container">
     <div class="heading">
-      <h3>CREATE YOUR TO-DO LIST</h3>
+      <h3 id="start" class="welcome-header"><span>CREATE YOUR TO-DO LIST</span></h3>
     </div>
   </div>
 
