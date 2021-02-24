@@ -92,11 +92,6 @@ img {
   width: 100vw;
   border-bottom: 2px solid var(--primary-color);
   background-color: #2e95f1;
-
-  /*  width: 100vw;
-  
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);*/
 }
 .showcase .flex {
   justify-content: space-between;
@@ -189,6 +184,7 @@ p {
 }
 
 /* Animations */
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -363,15 +359,17 @@ input.delete-all:hover {
   border: 2px solid var(--primary-color);
 }
 /* new list */
+
 .list-container {
-  background-color: var(--primary-color);
-  width: 45%;
+  width: 50%;
+  margin: 0 auto;
   padding: 25px 40px;
-  margin: auto;
+  background-color: var(--primary-color);
   border: 15px solid #2e95f1;
   border-radius: 10px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6), -2px -2px 3px rgba(0, 0, 0, 0.6);
 }
+
 .list-span {
   display: flex;
   flex-direction: column;

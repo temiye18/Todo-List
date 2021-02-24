@@ -14,7 +14,7 @@
   <div class="nav-bar">
     <div class="container">
       <nav class="flex">
-        <h1>GROUP 3 ENT PROJECT</h1>
+        <h1>TEMZY TO-DO</h1>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Services</a></li>
@@ -43,10 +43,8 @@
     </div>
   </section>
 
-  <div class="container">
-    <div class="heading">
-      <h3 id="start" class="welcome-header"><span>CREATE YOUR TO-DO LIST</span></h3>
-    </div>
+  <div class="heading">
+    <h3 id="start" class="welcome-header"><span>CREATE YOUR TO-DO LIST</span></h3>
   </div>
 
 
@@ -56,6 +54,7 @@
     </label>
     <input type="submit" value="create" name="create" class="create" />
   </form>
+
 
   <div style="margin-top: 3rem">
     <div class="list-container">
