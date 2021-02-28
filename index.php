@@ -66,25 +66,24 @@
   <br /><br />
 
   <form class="complete-actions" action="" method="post" align="center">
-    <div class="container">
-      <div>
-        <label for="task-number">Enter Task number:
-          <input id="task-number" type="number" name="complete" style="width: 70px" />
-        </label>
-        <input class="complete-button" type="submit" value="Finish Task" name="completer" />
-      </div>
-      <div>
-        <label for="task-no2">Enter Task Number:
-          <input id="task-no2" type="number" name="specifier" style="width: 70px" />
-        </label>
-        <input class="complete-button" type="submit" value="Delete Task" name="specific_delete" />
-      </div>
-
-      <br />
-      <div align="center">
-        <input class="delete-all" type="submit" value="Delete All" name="delete" />
-      </div>
+    <div>
+      <label for="task-number">Enter Task number:
+        <input id="task-number" type="number" name="complete" style="width: 70px" />
+      </label>
+      <input class="complete-button" type="submit" value="Finish Task" name="completer" />
     </div>
+    <div>
+      <label for="task-no2">Enter Task Number:
+        <input id="task-no2" type="number" name="specifier" style="width: 70px" />
+      </label>
+      <input class="complete-button" type="submit" value="Delete Task" name="specific_delete" />
+    </div>
+
+    <br />
+    <div align="center">
+      <input class="delete-all" type="submit" value="Delete All" name="delete" />
+    </div>
+
   </form>
 
 
